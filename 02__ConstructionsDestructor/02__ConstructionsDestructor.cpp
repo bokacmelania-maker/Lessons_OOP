@@ -133,12 +133,12 @@ private:
 
 public:
 
-// лас повинен м≥стити наступн≥ конструктори
+	// лас повинен м≥стити наступн≥ конструктори
 
-//Х онструктор по замовчуванню, €кий встановлюватиме Ђдефолтн≥ї дан≥
+	//Х онструктор по замовчуванню, €кий встановлюватиме Ђдефолтн≥ї дан≥
 
-// онструктор за замовчуванн€м н≥чого не бере в≥д користувача
-//викликаЇтьс€ без аргумент≥в
+	// онструктор за замовчуванн€м н≥чого не бере в≥д користувача
+	//викликаЇтьс€ без аргумент≥в
 	MyRectangle() {
 		width = 10;
 		height = 5;
@@ -147,11 +147,11 @@ public:
 		coordinates.y = 0;
 	}
 
-//Хѕараметризований конструктор, 
-// €кий приймаЇ один параметр Ђрозм≥рї та ≥н≥ц≥ал≥зуЇ ним ширину та висоту
+	//Хѕараметризований конструктор, 
+	// €кий приймаЇ один параметр Ђрозм≥рї та ≥н≥ц≥ал≥зуЇ ним ширину та висоту
 
-// ≤н≥ц≥ал≥зувати = задати зм≥нн≥й початкове значенн€ при створенн≥
-//(викликаЇтьс€ з аргументом ) 
+	// ≤н≥ц≥ал≥зувати = задати зм≥нн≥й початкове значенн€ при створенн≥
+	//(викликаЇтьс€ з аргументом ) 
 
 	MyRectangle(int size) {
 		if (size > 0) {
@@ -168,11 +168,11 @@ public:
 		coordinates.y = 0;
 	}
 
-//Хѕараметризований конструктор, €кий приймаЇ два параметри Ђширинуї та Ђвисотуї, 
-// €к≥ €вл€ютьс€ розм≥рами обТЇкта
-//ƒан≥ в≥д користувача приймаЇ саме параметризований.
+	//Хѕараметризований конструктор, €кий приймаЇ два параметри Ђширинуї та Ђвисотуї, 
+	// €к≥ €вл€ютьс€ розм≥рами обТЇкта
+	//ƒан≥ в≥д користувача приймаЇ саме параметризований.
 
-// лог≥ка €к в size
+	// лог≥ка €к в size
 	MyRectangle(int w, int h) {
 		if (w > 0 and h > 0) {
 			width = w;
@@ -189,9 +189,9 @@ public:
 	}
 
 
-//“а наступн≥ методи :
+	//“а наступн≥ методи :
 
-//Х¬ив≥д ф≥гури на екран, в≥дпов≥дного розм≥ру, символом та у в≥дпов≥дних координатах
+	//Х¬ив≥д ф≥гури на екран, в≥дпов≥дного розм≥ру, символом та у в≥дпов≥дних координатах
 
 	void Show_Rectangle()
 	{
@@ -213,8 +213,8 @@ public:
 		}
 	}
 
-//Х	«м≥на розм≥ру пр€мокутника.ћетод приймаЇ два парметри : 1 Ц зм≥на висоти, 2 Ц ширини
-	
+	//Х	«м≥на розм≥ру пр€мокутника.ћетод приймаЇ два парметри : 1 Ц зм≥на висоти, 2 Ц ширини
+
 	void New_Size(int h, int w) {
 		if (h > 0 and w > 0) {
 			height = h;
@@ -225,7 +225,7 @@ public:
 		}
 	}
 
-//Х	ѕерем≥щенн€ пр€мокутника. ћетод приймаЇ два парметри: 1 Ц величина перем≥щенн€ по ос≥ X, 2 Ц по ос≥ Y
+	//Х	ѕерем≥щенн€ пр€мокутника. ћетод приймаЇ два парметри: 1 Ц величина перем≥щенн€ по ос≥ X, 2 Ц по ос≥ Y
 	void move(int x, int y) {
 		if (coordinates.x + x >= 0 && coordinates.y + y >= 0) {
 			coordinates.x += x;
@@ -250,9 +250,9 @@ private:
 	int count_marks;
 	float average_mark;
 
-//3.SetAverageMark() Ц приватний метод дл€ обрахунку та
-// встановленн€ середньоњ оц≥нки студента(викликаЇтьс€
-// всередин≥ класа при додаванн≥ оц≥нки)
+	//3.SetAverageMark() Ц приватний метод дл€ обрахунку та
+	// встановленн€ середньоњ оц≥нки студента(викликаЇтьс€
+	// всередин≥ класа при додаванн≥ оц≥нки)
 	void SetAverageMark() {
 		float temp = 0;
 		for (int i = 0; i < count_marks; i++)
@@ -263,40 +263,40 @@ private:
 	}
 
 public:
-//¬ клас≥ повинн≥ буди реал≥зован≥ наступн≥ конструктори :
+	//¬ клас≥ повинн≥ буди реал≥зован≥ наступн≥ конструктори :
 
-//Х	 онструктор по замовчуванню() Ц встановлюватиме початков≥ дан≥
+	//Х	 онструктор по замовчуванню() Ц встановлюватиме початков≥ дан≥
 	Student() {
 		name = "Mark";
 		age = 18;
-		marks =  nullptr;
+		marks = nullptr;
 		count_marks = 0;
 		average_mark = 0;
 	}
-//Х	ѕараметризований конструктор(const char* name, int age) Ц 
-// ≥н≥ц≥ал≥зуЇ клас значенн€ми з параметр≥в
+	//Х	ѕараметризований конструктор(const char* name, int age) Ц 
+	// ≥н≥ц≥ал≥зуЇ клас значенн€ми з параметр≥в
 	Student(const char* name, int age) {
 		this->name = name;
 		if (age > 0) {
 			this->age = age;
 		}
-		else{
+		else {
 			cout << "Age cannot be negative and 0  " << endl;
-			this ->age = 18;
+			this->age = 18;
 
 		}
 		marks = nullptr; //дл€ вказ≥вник≥в 0 не пишуть , а пишуть nullptr!.
 		count_marks = 0;
 		average_mark = 0;
 	}
-//“акож створити деструктор дл€ зв≥льненн€ ресурс≥в та наступн≥ методи :
+	//“акож створити деструктор дл€ зв≥льненн€ ресурс≥в та наступн≥ методи :
 	~Student()
 	{
 		cout << "Destructor " << name << endl;
-				if (marks != nullptr)
-					delete[]marks;
+		if (marks != nullptr)
+			delete[]marks;
 	}
-//1.Print() Ц виводить ≥нформац≥ю про студента на екран
+	//1.Print() Ц виводить ≥нформац≥ю про студента на екран
 	void Print() {
 		cout << "Name : " << name << endl;
 		cout << "Age : " << age << endl;
@@ -305,23 +305,23 @@ public:
 		{
 			cout << marks[i] << " ";
 		}
-		cout << "\nAverage Mark : " << average_mark << endl;		
-}
-//2.AddMark(int mark) Ц додаЇ оц≥нку дл€ студента
+		cout << "\nAverage Mark : " << average_mark << endl;
+	}
+	//2.AddMark(int mark) Ц додаЇ оц≥нку дл€ студента
 	void AddMark(int mark) {
 		int* temp = new int[count_marks + 1];
-				for (int i = 0; i < count_marks; i++)
-				{
-					temp[i] = marks[i];
-				}
-				temp[count_marks] = mark;
-				if (marks != nullptr)
-					delete[]marks;
-				marks = temp;
-				count_marks++;
-				SetAverageMark();
+		for (int i = 0; i < count_marks; i++)
+		{
+			temp[i] = marks[i];
+		}
+		temp[count_marks] = mark;
+		if (marks != nullptr)
+			delete[]marks;
+		marks = temp;
+		count_marks++;
+		SetAverageMark();
 	}
-//4.	Save() Ц збереженн€ студента в файл
+	//4.	Save() Ц збереженн€ студента в файл
 	void Save()
 	{
 		ofstream out("Student.txt", ios_base::out);
@@ -341,10 +341,10 @@ public:
 		}
 	}
 
-//5.Load() Ц зчитуванн€ студента в файла
-	void Load(){
+	//5.Load() Ц зчитуванн€ студента в файла
+	void Load() {
 		ifstream in("Student.txt", ios_base::in);
-		if (in.is_open()) 
+		if (in.is_open())
 		{
 			getline(in, name);
 			in >> age;
@@ -352,7 +352,7 @@ public:
 			in >> temp;
 
 			if (marks != nullptr)
-			delete[]marks;
+				delete[]marks;
 			marks = nullptr;
 			count_marks = 0;
 			average_mark = 0;
@@ -369,20 +369,20 @@ public:
 		else {
 			cout << "Error" << endl;
 		}
-	  }
+	}
 
-//«абезпечити клас необх≥дними методами дл€ доступа до властивостей(getters, setters).ѕо можливост≥ застосувати делегуванн€ конструктор≥в.
+	//«абезпечити клас необх≥дними методами дл€ доступа до властивостей(getters, setters).ѕо можливост≥ застосувати делегуванн€ конструктор≥в.
 
-//getters
-	string getName() 
+	//getters
+	string getName()
 	{
 		return name;
 	}
-	int getAge() 
+	int getAge()
 	{
 		return age;
 	}
-	int* getMarks() 
+	int* getMarks()
 	{
 		return marks;
 	}
@@ -395,7 +395,7 @@ public:
 		return average_mark;
 	}
 
-// setters
+	// setters
 	void setName(string name) {
 		this->name = name;
 	}
@@ -414,15 +414,15 @@ public:
 
 int main()
 {
-//2
-	
+	//2
+
 	Student s1("Anton", 20);
-	
+
 	s1.AddMark(10);
 	s1.AddMark(5);
 	s1.AddMark(8);
 	s1.AddMark(2);
-	
+
 	s1.Print();
 
 	s1.Save();
@@ -433,74 +433,74 @@ int main()
 	cout << s1.getAge() << endl;
 	cout << s1.getCount_marks() << endl;
 	cout << s1.getAverage_mark() << endl;
-	
+
 
 	s1.setName("Vania");
 	s1.setAge(19);
 	s1.setAge(-99);
 	s1.Print();
 
-	
 
 
 
 
-//1
-		//MyRectangle r1;                
-		//r1.Show_Rectangle();
-		//MyRectangle r2(5);   
-		//cout << endl;
-		//r2.Show_Rectangle();
-		//MyRectangle r3(10, 4); 
-		//cout << endl;
-		//r3.move(1, 4);
-		//r3.Show_Rectangle();
-		//r3.New_Size(3, 8);          
-		//r3.Show_Rectangle();
-		//MyRectangle r4(-10);
-		//cout << endl;
-		//r4.Show_Rectangle();
-		//MyRectangle r5(-2, 4);
-		//cout << endl;
-		//r5.Show_Rectangle();
-		//r3.move(-9, 0);
-		//cout << endl;
-		//r3.New_Size(0, -1);
-		//r3.Show_Rectangle();
-		//MyRectangle r6(9, 4);
-		//cout << endl;
-		//r6.Show_Rectangle();
-		
+
+	//1
+			//MyRectangle r1;                
+			//r1.Show_Rectangle();
+			//MyRectangle r2(5);   
+			//cout << endl;
+			//r2.Show_Rectangle();
+			//MyRectangle r3(10, 4); 
+			//cout << endl;
+			//r3.move(1, 4);
+			//r3.Show_Rectangle();
+			//r3.New_Size(3, 8);          
+			//r3.Show_Rectangle();
+			//MyRectangle r4(-10);
+			//cout << endl;
+			//r4.Show_Rectangle();
+			//MyRectangle r5(-2, 4);
+			//cout << endl;
+			//r5.Show_Rectangle();
+			//r3.move(-9, 0);
+			//cout << endl;
+			//r3.New_Size(0, -1);
+			//r3.Show_Rectangle();
+			//MyRectangle r6(9, 4);
+			//cout << endl;
+			//r6.Show_Rectangle();
 
 
-	//Student student;//default constrcutor
-	////student.Initialization();
-	//student.Print();
-	//student.setName("Anton");
-	//student.setLastName("Chugun");
-	//student.AddMark(2);
-	//student.AddMark(4);
-	//student.AddMark(6);
-	//student.AddMark(3);
-	//student.Print();
 
-	//Student st2("Vasia", "Ivanchuk", "Mukolayouvich");
-	//st2.AddMark(7);
-	//st2.AddMark(12);
-	//st2.AddMark(8);
-	//st2.AddMark(9);
-	//st2.Print();
+		//Student student;//default constrcutor
+		////student.Initialization();
+		//student.Print();
+		//student.setName("Anton");
+		//student.setLastName("Chugun");
+		//student.AddMark(2);
+		//student.AddMark(4);
+		//student.AddMark(6);
+		//student.AddMark(3);
+		//student.Print();
 
-	//if (5 > 2)
-	//{
-	//	Student test("Boria", "Slipuy", "Nimuy");//Parametrized constructor
-	//	test.AddMark(10);
-	//	test.AddMark(11);
-	//	test.AddMark(9);
-	//	test.AddMark(8);
-	//	test.Print();
-	//}
-//
+		//Student st2("Vasia", "Ivanchuk", "Mukolayouvich");
+		//st2.AddMark(7);
+		//st2.AddMark(12);
+		//st2.AddMark(8);
+		//st2.AddMark(9);
+		//st2.Print();
+
+		//if (5 > 2)
+		//{
+		//	Student test("Boria", "Slipuy", "Nimuy");//Parametrized constructor
+		//	test.AddMark(10);
+		//	test.AddMark(11);
+		//	test.AddMark(9);
+		//	test.AddMark(8);
+		//	test.Print();
+		//}
+	//
 
 
 
